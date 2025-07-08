@@ -98,6 +98,28 @@ namespace TSP_Transponder.Models
                 },
                 Connector = new ConnectorInstance_MSFS(),
             },
+            new Simulator()
+            {
+                Platform = "Flight Simulator 2024",
+                Name = "MSFS 2024",
+                NameStandard = "msfs2024",
+                Exe = "FlightSimulator2024.exe",
+                FlightPlansFolders = new List<string>
+                {
+                    // MS Store: UNCONFIRMED
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Packages", "Microsoft.Limitless_8wekyb3d8bbwe", "LocalState"),
+                    // Steam: CONFIRMED
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Microsoft Flight Simulator 2024")
+                },
+                ConfigsFolders = new List<string>
+                {
+                    // MS Store: UNCONFIRMED
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Packages", "Microsoft.Limitless_8wekyb3d8bbwe", "LocalCache"),
+                    // Steam: CONFIRMED
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Microsoft Flight Simulator 2024")
+                },
+                Connector = new ConnectorInstance_MSFS(),
+            },
         };
         
         public static void Startup()

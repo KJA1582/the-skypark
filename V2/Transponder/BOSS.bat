@@ -1,8 +1,8 @@
 @echo off
 pushd %~dp0
 
-set GIT=F:\Documents\Clients\Parallel 42\The Skypark\Git\
-set WORKSPACE=F:\Documents\Clients\Parallel 42\The Skypark\Git\Dist\
+set GIT=C:\Users\llego\source\repos\the-skypark\Git\
+set WORKSPACE=C:\Users\llego\source\repos\the-skypark\Git\Dist\
 
 set input=%WORKSPACE%Input/
 
@@ -18,7 +18,7 @@ rmdir /s/q "%input%transponder/"
 
 ECHO.
 ECHO ------------------ Build / Obfuscate ------------------
-set msBuildExe="C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe"
+set msBuildExe="C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe"
 %msBuildExe% "./Release.proj"
 pause
 
