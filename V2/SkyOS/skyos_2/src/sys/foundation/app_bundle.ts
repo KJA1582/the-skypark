@@ -471,6 +471,7 @@ const Apps: Array<AppInfo> = [
 			'tier',
 			'tier_change',
 			'legal',
+			'remote',
 		],
 		app_theme: {
 			bright: {

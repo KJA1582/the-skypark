@@ -1,7 +1,7 @@
 {
   "name": "skyos_2",
   "productName": "Skypad",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "author": {
     "name": "TFDi Design",
@@ -11,11 +11,14 @@
   "main": "background.js",
   "private": true,
   "scripts": {
+    "clean": "rimraf dist && rimraf dist_electron",
     "setnode": "nvm use 15.14.0",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "electron:build": "vue-cli-service electron:build",
-    "electron:serve": "vue-cli-service electron:serve"
+    "electron:serve": "vue-cli-service electron:serve",
+    "build:all": "npm run clean && npm run build && npm run electron:build",
+    "skypad": "%localappdata%/Programs/skyos_2/Skypad.exe --debug-menu=true --server-port=3000"
   },
   "dependencies": {
     "@turf/turf": "^6.4.0",
@@ -25,11 +28,14 @@
     "core-js": "^3.15.1",
     "electron-google-analytics": "^1.0.2",
     "electron-storage": "^1.0.7",
+    "express": "^4.21.0",
     "html2canvas": "^1.0.0-rc.7",
+    "is-electron": "^2.2.2",
     "mapbox-gl": "2.1.1",
     "moment": "^2.29.1",
     "odometer": "^0.4.8",
     "postcss-easing-gradients": "^3.0.1",
+    "qrcode.vue": "^1.7.0",
     "simplebar-vue": "^2.0.0-beta.10",
     "suncalc": "^1.8.0",
     "v-mapbox": "^1.7.3",
@@ -56,7 +62,9 @@
     "eslint": "^7.29.0",
     "eslint-plugin-vue": "^7.11.1",
     "node-sass": "^6.0.1",
+    "rimraf": "^2.7.1",
     "sass-loader": "^10",
+    "ts-loader": "^8.2.0",
     "typescript": "^4.3.4",
     "vue-cli-plugin-electron-builder": "^2.0.0",
     "vue-template-compiler": "^2.6.14"
@@ -101,6 +109,5 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ],
-  "packageManager": "pnpm@10.11.1+sha512.e519b9f7639869dc8d5c3c5dfef73b3f091094b0a006d7317353c72b124e80e1afd429732e28705ad6bfa1ee879c1fce46c128ccebd3192101f43dd67c667912"
+  ]
 }
