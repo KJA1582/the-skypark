@@ -1,7 +1,7 @@
 {
   "name": "skyos_2",
   "productName": "Skypad",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "author": {
     "name": "TFDi Design",
@@ -38,7 +38,7 @@
     "qrcode.vue": "^1.7.0",
     "simplebar-vue": "^2.0.0-beta.10",
     "suncalc": "^1.8.0",
-    "v-mapbox": "^1.7.3",
+    "v-mapbox": "1.7.3",
     "vue": "^2.6.14",
     "vue-axios": "^3.2.4",
     "vue-class-component": "^7.2.6",

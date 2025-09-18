@@ -60,8 +60,8 @@ importers:
         specifier: ^1.8.0
         version: 1.9.0
       v-mapbox:
-        specifier: ^1.7.3
-        version: 1.11.2(@vue/composition-api@1.7.2(vue@2.7.16))(mapbox-gl@2.1.1)(vue@2.7.16)
+        specifier: 1.7.3
+        version: 1.7.3(mapbox-gl@2.1.1)(vue@2.7.16)
       vue:
         specifier: ^2.6.14
         version: 2.7.16
@@ -6859,12 +6859,11 @@ packages:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
     hasBin: true
 
-  v-mapbox@1.11.2:
-    resolution: {integrity: sha512-52OyFD3OCdRorJoX6XKfWXQKW5DGv67CxbBHJqYpyUhlSUHRCdsHHZdoepebjenOAi3D/rQP5p5SmLJpD+/aZw==}
-    engines: {node: '>=16.5.0', npm: '>=7.20.0'}
+  v-mapbox@1.7.3:
+    resolution: {integrity: sha512-ijO6CT9bMn8CHNhrf4rlvODZRa/NM1FFJI6fG/g+tEyUfQmY7kgmE0+WTZSQCB4mzasbHNNqdIra9456s777Lw==}
+    engines: {node: '>=12.18.3'}
     peerDependencies:
-      '@vue/composition-api': ^1.4.1
-      mapbox-gl: 1.13.2
+      mapbox-gl: ^1.13.1
       vue: ^2.6.14
 
   v8-compile-cache@2.4.0:
@@ -15721,12 +15720,13 @@ snapshots:
 
   uuid@8.3.2: {}
 
-  v-mapbox@1.11.2(@vue/composition-api@1.7.2(vue@2.7.16))(mapbox-gl@2.1.1)(vue@2.7.16):
+  v-mapbox@1.7.3(mapbox-gl@2.1.1)(vue@2.7.16):
     dependencies:
-      '@vue/composition-api': 1.7.2(vue@2.7.16)
       map-promisified: 0.4.0
       mapbox-gl: 2.1.1
       vue: 2.7.16
+    optionalDependencies:
+      fsevents: 2.3.3
 
   v8-compile-cache@2.4.0: {}
 
